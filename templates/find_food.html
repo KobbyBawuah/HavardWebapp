@@ -1,0 +1,27 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    Find Food
+{% endblock %}
+
+{% block main %}
+
+
+    <form action="https://google.com/search" type="GET">
+        <div class="form-group">
+            <label style="font-weight:bold;"> What food do you wish to eat:
+            <input autocomplete="off" class="form-control" name="q" placeholder="Food" type="search"></label>
+        </div>
+        <input class="btn btn-primary" type="submit" value="Search">
+    <script>
+        var form = document.querySelector("form");
+        form.addEventListener("submit", function (e) {
+        e.preventDefault();
+        var search = form.querySelector("input[type=search]");
+        search.value = "Closest location to me to get " + search.value;
+        form.submit();
+        });
+    </script>
+    </form>
+
+{% endblock %}

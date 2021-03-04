@@ -1,0 +1,25 @@
+{% extends "layout.html" %}
+
+{% block title %}
+    File
+{% endblock %}
+
+{% block main %}
+
+
+    <div class="wrapper">
+    <a class="nav-link" href="/find_food"><div class="firstdiv"><div class="food">FOOD</div></div></a>
+    <a class="nav-link" href="/map"><div class="secdiv"><div class="covid">COVID</div></div></a>
+    <a class="nav-link" href="/transactions"><div class="lastdiv"><div class="cards">Card Transactions</div></div></a>
+    </div>
+
+    <table class = "table table-striped" style:"width:100%;">
+        <tbody>
+            <tr style="font-weight:bold;text-align:left;">
+                <td>Balance:</td>
+                <td> </td>
+                <td>{{current_cash}}</td>
+            </tr>
+        </tbody>
+    </table>
+{% endblock %}
